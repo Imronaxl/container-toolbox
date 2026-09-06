@@ -8,30 +8,6 @@
 .
 ├── app.py                      # Flask-приложение
 ├── requirements.txt            # зависимости Python
-## Вопросы и ответы
-
-Полные ответы на теоретические вопросы и скриншоты с результатами работы вынесены в отдельный PDF-файл для аккуратного представления и печати:
-
-- Документ: [docs/answers.pdf](docs/answers.pdf)
-- Схема (draw.io): https://drive.google.com/file/d/1gJtV93H90MSnVCqSozx_Lxrzv9WVEdt-/view?usp=sharing
-
-Просмотрите `docs/answers.pdf` для подробных ответов на все вопросы и наглядных скриншотов.
-FROM → JOIN → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT
-```
-
-Пример:
-
-```sql
-SELECT department, COUNT(*) AS emp_count
-FROM employees
-WHERE status = 'active'      -- до агрегации
-GROUP BY department
-HAVING COUNT(*) > 5;          -- после агрегации
-```
-
-Правило выбора простое: условие на отдельную строку — `WHERE`; условие на результат агрегации — `HAVING`.
-
-## Практическое задание
 
 ### Локальный запуск приложения
 
