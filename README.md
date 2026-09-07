@@ -6,8 +6,8 @@
 
 ```
 .
-├── app.py                      # Flask-приложение
-├── requirements.txt            # зависимости Python
+├── app.py                     
+├── requirements.txt           
 
 ### Локальный запуск приложения
 
@@ -90,15 +90,3 @@ https://drive.google.com/file/d/1gJtV93H90MSnVCqSozx_Lxrzv9WVEdt-/view?usp=shari
 3. kube-proxy через Endpoints балансирует запрос между двумя Pod'ами.
 4. Каждый Pod слушает `32777` (targetPort сервиса).
 5. gunicorn возвращает JSON с `hostname` пода — так видно, какая реплика ответила.
-
-## Скриншоты
-
-См. папку `docs/screenshots/`. Необходимый минимум:
-
-1. `docker build` и `docker push`
-2. Страница образа на Docker Hub
-3. `minikube status` и `kubectl get nodes`
-4. `kubectl get pods -l app=hello-app -o wide`
-5. `kubectl get svc hello-app`
-6. Терминал с запущенным `kubectl port-forward`
-7. Окно браузера с ответом приложения
